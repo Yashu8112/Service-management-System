@@ -1,0 +1,26 @@
+CREATE TABLE admin (
+    username TEXT PRIMARY KEY,
+    password TEXT NOT NULL
+);
+
+CREATE TABLE customers (
+    userId TEXT PRIMARY KEY,
+    username TEXT NOT NULL,
+    email TEXT NOT NULL,
+    password TEXT NOT NULL,
+    address TEXT,
+    contactNumber TEXT
+);
+CREATE TABLE bookings (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    userId TEXT NOT NULL,
+    userName TEXT NOT NULL,
+    serviceId TEXT NOT NULL,
+    date TEXT NOT NULL,
+    slot TEXT NOT NULL,
+    address TEXT NOT NULL,
+    vendor TEXT NOT NULL,
+    serviceType TEXT NOT NULL,
+    status TEXT NOT NULL,
+    amount TEXT NOT NULL
+);
